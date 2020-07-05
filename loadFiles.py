@@ -12,8 +12,10 @@ def getFile():
 
 #Column names are PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked
 def getRowFromFile(theFile, rowNumber):
+    output = {}
     for i in range(2, len(theFile)):
-        print(theFile[i][rowNumber])
+        output[i] = theFile[i][rowNumber]
+    return output
 
 theFile = getFile()
 getRowFromFile(theFile, 1)
